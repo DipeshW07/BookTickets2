@@ -1,0 +1,465 @@
+/******************************************************
+  GLOBAL RESET & COMMON STYLES
+******************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* Inherits color from parent */
+}
+
+/******************************************************
+  HEADER & NAVBAR
+******************************************************/
+header {
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #007bff;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+.nav-links li a:hover {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+.nav-links li a.active {
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+}
+.auth-links {
+  margin-left: 20px;
+}
+.auth-links a {
+  color: #007bff;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+.auth-links a:hover {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+.auth-links a.active {
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/******************************************************
+  MAIN BANNER (Home Page)
+******************************************************/
+.main-banner {
+  /* Replace 'images/banner.jpg' with your own image path */
+  background: url('images/TravelBanner.jpg') center center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  min-height: 60vh;
+}
+.main-banner .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.main-banner .banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.main-banner h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.main-banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.main-banner .cta-button {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.main-banner .cta-button:hover {
+  background: #0056b3;
+}
+
+/******************************************************
+  HOMEPAGE SECTIONS
+******************************************************/
+/* Description Section */
+.description {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.description h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Services Section */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+  background: #fff;
+}
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.service-card {
+  background: #f9f9f9;
+  width: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.service-card h3 {
+  margin: 15px;
+  font-size: 20px;
+  color: #007bff;
+}
+.service-card p {
+  margin: 0 15px 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/******************************************************
+  BOOKING PAGE STYLES
+******************************************************/
+.booking-section {
+  padding: 40px 20px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booking-container {
+  background: #fff;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.booking-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.travel-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.travel-options button {
+  padding: 10px 20px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.travel-options button.active,
+.travel-options button:hover {
+  background: #007bff;
+  color: #fff;
+}
+#bookingForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#bookingForm .form-group {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+}
+#bookingForm .form-group label {
+  margin-bottom: 5px;
+  color: #555;
+}
+#bookingForm .form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.submit-btn {
+  width: 100%;
+  text-align: center;
+}
+.submit-btn button {
+  padding: 10px 40px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit-btn button:hover {
+  background: #0056b3;
+}
+
+/******************************************************
+  ABOUT PAGE STYLES
+******************************************************/
+.about-section {
+  padding: 40px 20px;
+  background: #fff;
+}
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.about-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about-container img {
+  max-width: 80%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/******************************************************
+  CONTACT PAGE STYLES
+******************************************************/
+.contact-section {
+  padding: 40px 20px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container {
+  background: #fff;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.contact-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.contact-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+/******************************************************
+  AUTH (LOGIN / SIGN UP) PAGE STYLES
+******************************************************/
+.auth-section {
+  padding: 40px 20px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-container {
+  background: #fff;
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.auth-toggle button {
+  padding: 10px 20px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  margin: 0 5px;
+}
+.auth-toggle button.active,
+.auth-toggle button:hover {
+  background: #007bff;
+  color: #fff;
+}
+.auth-form h2 {
+  margin-bottom: 20px;
+}
+.auth-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.auth-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.auth-form .submit-btn {
+  text-align: center;
+}
+.auth-form .submit-btn button {
+  padding: 10px 30px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.auth-form .submit-btn button:hover {
+  background: #0056b3;
+}
+
+/******************************************************
+  FOOTER STYLES
+******************************************************/
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+footer p {
+  font-size: 14px;
+  color: #666;
+}
+
+/******************************************************
+  RESPONSIVE MEDIA QUERIES
+******************************************************/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .nav-links {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .auth-links {
+    margin-top: 10px;
+  }
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  #bookingForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-banner h1 {
+    font-size: 32px;
+  }
+  .main-banner p {
+    font-size: 16px;
+  }
+  .description h2,
+  .services h2,
+  .about-container h2,
+  .contact-container h2,
+  .auth-container h2 {
+    font-size: 24px;
+  }
+  .service-card {
+    width: 90%;
+  }
+}

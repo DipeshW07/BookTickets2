@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelEasy - Login/Sign Up</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="logo">TravelEasy</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Single link for Login/Sign Up page (current page) -->
+      <div class="auth-links">
+        <a href="auth.html" class="active">Login / Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- AUTH SECTION -->
+  <section class="auth-section">
+    <div class="auth-container">
+      <div class="auth-toggle">
+        <button id="loginBtn" class="active" onclick="showLogin()">Login</button>
+        <button id="signupBtn" onclick="showSignUp()">Sign Up</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="auth-form">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="loginUsername">Username or Email</label>
+          <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter username or email" required />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" required />
+        </div>
+        <div class="form-group submit-btn">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" class="auth-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" name="signupUsername" placeholder="Choose a username" required />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="signupPassword" placeholder="Create a password" required />
+        </div>
+        <div class="form-group submit-btn">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>&copy; 2025 TravelEasy. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to toggle between login and sign up -->
+  <script>
+    function showLogin() {
+      document.getElementById('loginForm').style.display = 'block';
+      document.getElementById('signupForm').style.display = 'none';
+      document.getElementById('loginBtn').classList.add('active');
+      document.getElementById('signupBtn').classList.remove('active');
+    }
+
+    function showSignUp() {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('signupForm').style.display = 'block';
+      document.getElementById('loginBtn').classList.remove('active');
+      document.getElementById('signupBtn').classList.add('active');
+    }
+  </script>
+</body>
+</html>
